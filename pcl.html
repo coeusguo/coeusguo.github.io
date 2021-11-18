@@ -1,0 +1,248 @@
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHLYGK132J"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EHLYGK132J');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+	<title>STCN</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+<br><br><br><br>
+<div class="container">
+        <div class="row text-center" style="font-size:38px">
+            <div class="col">
+                Learning Transferable Part-Level Representation by Language Supervision
+            </div>
+        </div>
+
+        <br>
+        <div class="row text-center" style="font-size:28px">
+            <div class="col">
+            CVPR 2022 Submission Under Review
+            </div>
+        </div>
+        <br>
+
+        <div class="h-100 row text-center heavy justify-content-md-center" style="font-size:24px;">
+            <div class="col-sm-3">
+                <a href="https://hkchengrex.github.io/">Shaopeng Guo</a>
+            </div>
+            <div class="col-sm-3">
+                Yonglu Li
+            </div>
+            <div class="col-sm-3">
+                Xinpeng Liu
+            </div>
+            <div class="col-sm-3">
+                Xinyu Xu
+            </div>
+            <div class="col-sm-3">
+                Cewu Lu
+            </div>
+            <div class="col-sm-3">
+                Yu-Wing Tai
+            </div>
+            <div class="col-sm-3">
+                Chi-Keung Tang
+            </div>
+        </div>
+
+        <br>
+
+        <div class="h-100 row text-center justify-content-md-center" style="font-size:20px;">
+            <div class="col-sm-2">
+                <!-- <a href="https://arxiv.org/pdf/2005.03354.pdf">[Paper]</a> -->
+                [Paper]
+            </div>
+            <div class="col-sm-2">
+                <!-- <a href="https://github.com/Zx55/dmcp">[Code]</a> -->
+                [Code]
+            </div>
+        </div>
+
+    <br>
+
+    <!-- <i>News:</i> In the <a href="https://youtube-vos.org/challenge/2021/leaderboard/">YouTubeVOS 2021 challenge</a>, STCN achieved 1st place accuracy in novel (unknown) classes and 2nd place in overall accuracy. Our solution is also fast and light. -->
+
+    <hr>
+
+    <div class="row" style="font-size:32px">
+        <div class="col">
+        Abstract
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p style="text-align: justify;">
+                Human-Object Interaction (HOI) detection plays an important role in human activity understanding. 
+                Most previous methods solely rely on human instance-level supervision and thus cannot effectively disentangle the fine-grained action semantics (e.g., holding while eating). 
+                Recently, <a href="https://arxiv.org/pdf/2004.00945.pdf" >PaStaNet</a> has proposed to address the problem by explicitly labeling the states of each body part with corresponding human pose and boxes in the images. 
+                However, its network structure is very complicated and hard to train and make inferences due to the complex input.
+                In this paper, we propose a novel framework that adopts a transformer-based detector that, besides using HOI labels, only employ human-part state annotations (i.e., without human part box position and human pose).
+                Instead of directly applying discrete human-part labels during classification, we incorporate a language model BERT to transform natural language labels to continuous latent feature vectors and train our model by contrastive loss. 
+                Moreover, we can further utilize our trained BERT to train our model with the weakly-labeled dataset without part state labels (e.g., AVA) by language supervision. 
+                The experimental results on the HICO-DET dataset demonstrate the superiority of our method in terms of overall mAP <strong>(34.0 vs 29.1)</strong> and especially mAP of rare classes <strong>(31.9 vs 22.6)</strong>> compared with the state-of-the-art methods.
+            </p>
+        </div>
+    </div>
+
+    <!-- <div class="h-100 row text-center justify-content-md-center">
+        <div class="col">
+            <img width="65%" src="https://imgur.com/TY1ScRy.jpg" alt="framework">
+        </div>
+    </div> -->
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- <div class="row" style="font-size:32px">
+        <div class="col">
+        Quantitative Results
+        </div>
+    </div> -->
+
+    <br>
+    <!-- <div class="h-100 row text-center justify-content-md-center">
+        <div class="col">
+            <table class="metric_table">
+                <tr>
+                    <th class='left_align'>Dataset</th>
+                    <th class='left_align'>Split</th>
+                    <th>J&F</th>
+                    <th>J</th>
+                    <th>F</th>
+                    <th>FPS</th>
+                    <th>FPS (AMP)</th>
+                </tr>
+                <tr>
+                    <td class='left_align'>DAVIS 2016</td>
+                    <td class='left_align'>validation</td>
+                    <td>91.7</td>
+                    <td>90.4</td>
+                    <td>93.0</td>
+                    <td>26.9</td>
+                    <td>40.8</td>
+                </tr>
+                <tr>
+                    <td class='left_align'>DAVIS 2017</td>
+                    <td class='left_align'>validation</td>
+                    <td>85.3</td>
+                    <td>82.0</td>
+                    <td>88.6</td>
+                    <td>20.2</td>
+                    <td>34.1</td>
+                </tr>
+                <tr>
+                    <td class='left_align'>DAVIS 2017</td>
+                    <td class='left_align'>test-dev</td>
+                    <td>79.9</td>
+                    <td>76.3</td>
+                    <td>83.5</td>
+                    <td>14.6</td>
+                    <td>22.7</td>
+                </tr>
+            </table>
+            <br>
+            <table class="metric_table">
+                <tr>
+                    <th class='left_align'>Dataset</th>
+                    <th class='left_align'>Split</th>
+                    <th>Global Mean</th>
+                    <th>J Seen</th>
+                    <th>F Seen</th>
+                    <th>J Unseen</th>
+                    <th>F Unseen</th>
+                </tr>
+                <tr>
+                    <td class='left_align'>YouTubeVOS 18</td>
+                    <td class='left_align'>validation</td>
+                    <td>84.3</td>
+                    <td>83.2</td>
+                    <td>87.9</td>
+                    <td>79.0</td>
+                    <td>87.2</td>
+                </tr>
+                <tr>
+                    <td class='left_align'>YouTubeVOS 19</td>
+                    <td class='left_align'>validation</td>
+                    <td>84.2</td>
+                    <td>82.6</td>
+                    <td>87.0</td>
+                    <td>79.4</td>
+                    <td>87.7</td>
+                </tr>
+            </table>
+            <br>
+            <table class="metric_table">
+                <tr>
+                    <th class='left_align'>Dataset</th>
+                    <th>AUC-J&F</th>
+                    <th>J&F @ 60s</th>
+                </tr>
+                <tr>
+                    <td class='left_align'>DAVIS Interactive</td>
+                    <td>88.4</td>
+                    <td>88.8</td>
+                </tr>
+            </table>
+        </div>
+    </div> -->
+
+    <br>
+    <hr>
+    <br>
+
+
+<!-- 
+    <div class="row" style="font-size:32px">
+        <div class="col">
+        Qualitative Results
+        </div>
+    </div>
+    <br> -->
+    <!-- <center>
+        <iframe style="width:100%; aspect-ratio: 1.78;"
+            src="https://www.youtube.com/embed/j88gG-foerw" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </center> -->
+
+    <br><br>
+
+    <div style="font-size: 14px;">
+        Contact: Shaopeng Guo sguoad@connect.ust.hk
+        <br>
+        <div style="color: lightgray;">
+            Website modified from: https://github.com/ajabri/videowalk/blob/master/index.html
+        </div>
+    </div>
+
+    <br><br>
+
+</div>
+
+</body>
+</html>
