@@ -53,7 +53,7 @@
           <!-- PCL -->
           <tr onmouseout="rgbd_stop()" onmouseover="rgbd_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <div id='rgbd_still'><img style="width:100%;max-width:100%" src="images/PCL.png"></div>
+              <div id='rgbd_still'><img style="width:100%;max-width:100%" src="images/mcl.png"></div>
               <script type="text/javascript">
                 function rgbd_start() {
                   document.getElementById('rgbd_anim').style.display = 'inline';
@@ -83,6 +83,38 @@
               </p>
             </td>
           </tr>
+
+          <!-- MCL -->
+          <tr onmouseout="rgbd_stop()" onmouseover="rgbd_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div id='rgbd_still'><img style="width:100%;max-width:100%" src="images/PCL.png"></div>
+              <script type="text/javascript">
+                function rgbd_start() {
+                  document.getElementById('rgbd_anim').style.display = 'inline';
+                  document.getElementById('rgbd_still').style.display = 'none';
+                }
+
+                function rgbd_stop() {
+                  document.getElementById('rgbd_anim').style.display = 'none';
+                  document.getElementById('rgbd_still').style.display = 'inline';
+                }
+                rgbd_stop()
+              </script>
+            </td>
+            <td width="75%" valign="middle">
+              <papertitle>Multi-scale Cooperative Learning for TrainingEfficient Visual Transformers</papertitle>
+              <br>
+              <a href="https://jiangfanhan.github.io/">Jiangfan Han*</a>, <strong>Shaopeng Guo*</strong>,  Jianbo Liu*, <a href="https://scholar.google.com.hk/citations?user=fCeZ32EAAAAJ&hl=en">Kun Yuan</a>, <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>, <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>
+              <p><strong>*</strong> indicates equal contribution</p>
+              <br>
+              <em>IJCV submission, under review</em> &nbsp 
+              <br>
+              Project Page / PDF / Code
+              <p> We propose a Multi-scale Cooperative Learning (MCL) framework to train an efficient visual Transformer. With the help of the proposed patch compression mechanism, MCL trains the visual Transformer model with smaller and larger patches simultaneously, while inference with only the large patch size (25% FLOPs.) 
+                <br>
+              </p>
+            </td>
+          </tr>
           
           <!-- CeiT -->
           <tr onmouseout="rgbd_stop()" onmouseover="rgbd_start()">
@@ -104,7 +136,7 @@
             <td width="75%" valign="middle">
               <papertitle>Incorporating Convolution Designs into Visual Transformers</papertitle>
               <br>
-              <a href="hhttps://scholar.google.com.hk/citations?user=fCeZ32EAAAAJ&hl=en">Kun Yuan</a>, <strong>Shaopeng Guo</strong>,  <a href="https://liuziwei7.github.io/">Ziwei Liu</a>, <a href="https://xuxinyu.website/about/">Xinyu Xu</a>, <a href="https://scholar.google.com/citations?user=cC8lXi8AAAAJ&hl=zh-CN">Aojun Zhou</a>, <a href="http://forwil.xyz/">Fengwei Yu</a>, <a href="https://wuwei-ai.org/">Wei Wu</a>
+              <a href="https://scholar.google.com.hk/citations?user=fCeZ32EAAAAJ&hl=en">Kun Yuan</a>, <strong>Shaopeng Guo</strong>,  <a href="https://liuziwei7.github.io/">Ziwei Liu</a>, <a href="https://xuxinyu.website/about/">Xinyu Xu</a>, <a href="https://scholar.google.com/citations?user=cC8lXi8AAAAJ&hl=zh-CN">Aojun Zhou</a>, <a href="http://forwil.xyz/">Fengwei Yu</a>, <a href="https://wuwei-ai.org/">Wei Wu</a>
               <br>
               <em>ICCV</em>, 2021 &nbsp
               <br>
@@ -136,7 +168,7 @@
             <td width="75%" valign="middle">
               <papertitle>Differentiable Dynamic Wirings for Neural Networks</papertitle>
               <br>
-              <a href="hhttps://scholar.google.com.hk/citations?user=fCeZ32EAAAAJ&hl=en">Kun Yuan</a>, <a href="https://liqq010.github.io/">Quanquan Li</a>, <strong>Shaopeng Guo</strong>,  <a href="https://scholar.google.com/citations?user=-Wpd7FcAAAAJ&hl=en">Dapeng Chen</a>, <a href="https://scholar.google.com/citations?user=cC8lXi8AAAAJ&hl=zh-CN">Aojun Zhou</a>, <a href="http://forwil.xyz/">Fengwei Yu</a>, <a href="https://liuziwei7.github.io/">Ziwei Liu</a>
+              <a href="https://scholar.google.com.hk/citations?user=fCeZ32EAAAAJ&hl=en">Kun Yuan</a>, <a href="https://liqq010.github.io/">Quanquan Li</a>, <strong>Shaopeng Guo</strong>,  <a href="https://scholar.google.com/citations?user=-Wpd7FcAAAAJ&hl=en">Dapeng Chen</a>, <a href="https://scholar.google.com/citations?user=cC8lXi8AAAAJ&hl=zh-CN">Aojun Zhou</a>, <a href="http://forwil.xyz/">Fengwei Yu</a>, <a href="https://liuziwei7.github.io/">Ziwei Liu</a>
               <br>
               <em>ICCV</em>, 2021 &nbsp
               <br>
