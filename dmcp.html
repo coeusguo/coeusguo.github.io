@@ -31,27 +31,30 @@
 <div class="container">
         <div class="row text-center" style="font-size:38px">
             <div class="col">
-            Rethinking Space-Time Networks with Improved Memory Coverage for Efficient Video Object Segmentation
+                DMCP: Differentiable Markov Channel Pruning for Neural Networks
             </div>
         </div>
 
         <br>
         <div class="row text-center" style="font-size:28px">
             <div class="col">
-            NeurIPS 2021
+            CVPR 2020
             </div>
         </div>
         <br>
 
         <div class="h-100 row text-center heavy justify-content-md-center" style="font-size:24px;">
             <div class="col-sm-3">
-                <a href="https://hkchengrex.github.io/">Ho Kei Cheng</a>
+                <a href="https://hkchengrex.github.io/">Shaopeng Guo</a>
             </div>
             <div class="col-sm-3">
-                Yu-Wing Tai
+                Yujie Wang
             </div>
             <div class="col-sm-3">
-                Chi-Keung Tang
+                Quanquan Li
+            </div>
+            <div class="col-sm-3">
+                Junjie Yan
             </div>
         </div>
 
@@ -59,13 +62,10 @@
 
         <div class="h-100 row text-center justify-content-md-center" style="font-size:20px;">
             <div class="col-sm-2">
-                <a href="https://arxiv.org/abs/2106.05210">[arXiv]</a>
+                <a href="https://arxiv.org/pdf/2005.03354.pdf">[Paper]</a>
             </div>
             <div class="col-sm-2">
-                <a href="https://arxiv.org/pdf/2106.05210">[Paper]</a>
-            </div>
-            <div class="col-sm-2">
-                <a href="https://github.com/hkchengrex/STCN">[Code]</a>
+                <a href="https://github.com/Zx55/dmcp">[Code]</a>
             </div>
         </div>
 
@@ -83,32 +83,36 @@
     <div class="row">
         <div class="col">
             <p style="text-align: justify;">
-                This paper presents a simple yet effective approach to modeling space-time correspondences in the context of video object segmentation. Unlike most existing approaches, we establish correspondences directly between frames without re-encoding the mask features for every object, leading to a highly efficient and robust framework. With the correspondences, every node in the current query frame is inferred by aggregating features from the past in an associative fashion. 
-                We cast the aggregation process as a voting problem and find that the existing inner-product affinity leads to poor use of memory with a small (fixed) subset of memory nodes dominating the votes, regardless of the query. 
-                In light of this phenomenon, we propose using the negative squared Euclidean distance instead to compute the affinities. We validated that every memory node now has a chance to contribute, and experimentally showed that such diversified voting is beneficial to both memory efficiency and inference accuracy. 
-                The synergy of correspondence networks and diversified voting works exceedingly well, achieves new state-of-the-art results on both DAVIS and YouTubeVOS datasets while running significantly faster at 20+ FPS for multiple objects without bells and whistles.
+                Recent works imply that the channel pruning can be regarded as searching optimal sub-structure from unpruned networks. 
+                However, existing works based on this observation require training and evaluating a large number of tructures, which limits their application. 
+                In this paper, we propose a novel differentiable method for channel pruning, named Differentiable Markov Channel Pruning (DMCP), to efficiently search the optimal sub-structure. 
+                Our method is differentiable and can be directly optimized by gradient descent with respect to standard task loss and budget regularization (e.g. FLOPs constraint). 
+                In DMCP, we model the channel pruning as a Markov process, in which each state represents for retaining the corresponding channel during pruning, and transitions between states denote the pruning process. 
+                In the end, our method is able to implicitly select the proper number of channels in each layer by the Markov process with optimized transitions. 
+                To validate the effectiveness of our method, we perform extensive experiments on Imagenet with ResNet and MobilenetV2. 
+                Results show our method can achieve consistent improvement than state-of-the-art pruning methods in various FLOPs settings
             </p>
         </div>
     </div>
 
-    <div class="h-100 row text-center justify-content-md-center">
+    <!-- <div class="h-100 row text-center justify-content-md-center">
         <div class="col">
             <img width="65%" src="https://imgur.com/TY1ScRy.jpg" alt="framework">
         </div>
-    </div>
+    </div> -->
 
     <br>
     <hr>
     <br>
 
-    <div class="row" style="font-size:32px">
+    <!-- <div class="row" style="font-size:32px">
         <div class="col">
         Quantitative Results
         </div>
-    </div>
+    </div> -->
 
     <br>
-    <div class="h-100 row text-center justify-content-md-center">
+    <!-- <div class="h-100 row text-center justify-content-md-center">
         <div class="col">
             <table class="metric_table">
                 <tr>
@@ -192,50 +196,33 @@
                 </tr>
             </table>
         </div>
-    </div>
+    </div> -->
 
     <br>
     <hr>
     <br>
 
-    <!-- <div class="row" style="font-size:32px">
-        <div class="col">
-        Presentation
-        </div>
-    </div>
-    <br>
-    <center>
-        <iframe style="width:100%; aspect-ratio: 1.78;"
-            src="https://www.youtube.com/embed/lN--up3FYzU" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </center>
 
-    <br>
-    <hr>
-    <br> -->
-
+<!-- 
     <div class="row" style="font-size:32px">
         <div class="col">
         Qualitative Results
         </div>
     </div>
-    <br>
-    <center>
+    <br> -->
+    <!-- <center>
         <iframe style="width:100%; aspect-ratio: 1.78;"
             src="https://www.youtube.com/embed/j88gG-foerw" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
         </iframe>
-    </center>
+    </center> -->
 
     <br><br>
 
     <div style="font-size: 14px;">
-        Contact: Ho Kei Cheng (Rex) hkchengrex@gmail.com
+        Contact: Shaopeng Guo sguoad@connect.ust.hk
         <br>
         <div style="color: lightgray;">
             Website modified from: https://github.com/ajabri/videowalk/blob/master/index.html
