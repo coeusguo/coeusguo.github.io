@@ -32,7 +32,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/profile.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/catHead.jpeg" class="hoverZoomLink"></a>
+              <a href="images/profile.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/profile.jpeg" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -48,7 +48,41 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <!-- PCL -->
+          <tr onmouseout="rgbd_stop()" onmouseover="rgbd_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div id='rgbd_still'><img style="width:100%;max-width:100%" src="images/PCL.png"></div>
+              <script type="text/javascript">
+                function rgbd_start() {
+                  document.getElementById('rgbd_anim').style.display = 'inline';
+                  document.getElementById('rgbd_still').style.display = 'none';
+                }
 
+                function rgbd_stop() {
+                  document.getElementById('rgbd_anim').style.display = 'none';
+                  document.getElementById('rgbd_still').style.display = 'inline';
+                }
+                rgbd_stop()
+              </script>
+            </td>
+            <td width="75%" valign="middle">
+
+                <papertitle>Learning Transferable Part-Level Representations by Language Supervation</papertitle>
+
+              <br>
+              <strong>Shaopeng Guo</strong>, <a href="https://dirtyharrylyl.github.io/">Yonglu Li</a>, <a href="https://foruck.github.io/">Xinpeng Liu</a>, <a href="https://xuxinyu.website/about/">Xinyu Xu</a>, <a href="https://www.mvig.org/">Cewu Lu</a>, <a href="https://scholar.google.com.hk/citations?user=nFhLmFkAAAAJ&hl=en">Yu-Wing Tai</a>, <a href="https://scholar.google.com.hk/citations?user=EWfpM74AAAAJ&hl=en">Chi-Keung Tang</a>
+              <br>
+              <em>CVPR 2022 submission, under review</em> &nbsp 
+              <br>
+              <!-- <a href="https://drive.google.com/file/d/0B4nuwEMaEsnmMzQ4ZVp1SWdnVkk/view?usp=sharing">PDF</a> / <a href="https://github.com/Zx55/dmcp">code</a> -->
+              Project Page / PDF / Code
+              <p>Instead of directly applying discrete human-part labels during classification, we incorporate a language model BERT to transform natural language labels to continuous latent feature vectors and train our model by contrastive loss.
+                <br>
+              </p>
+            </td>
+          </tr>
+          
+          <!-- DMCP -->
           <tr onmouseout="rgbd_stop()" onmouseover="rgbd_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div id='rgbd_still'><img style="width:100%;max-width:100%" src="images/dmcp.png"></div>
