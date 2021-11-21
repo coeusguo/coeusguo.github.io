@@ -256,6 +256,24 @@
     </div>
 
     <br>
+    <div class="row">
+        <div class="col">
+            <p style="text-align: justify;">
+                In the table, we show the results of various baselines and PCL with its variants, whose rows are marked in green color. 
+                The last three rows are our proposed method with PaSta supervision, in which PCL* means the model is directly trained on HICO-DET with PaSta annotations. 
+                The model shows significant improvement in the rare HOI class from 22.6 (IDN) to 27.8 with 5.2 mAP, while the overall mAP improved from 29.1 (QPIC) to 32.1 with 3.0 mAP. 
+                With the pre-training on HAKE with PaSta labels, denoted by PCL, the overall mAP got further improved by 1.6 mAP from 32.1 to 33.7. 
+                Moreover, the mAP in rare HOI classes improved by a large margin by 3.9 mAP from 27.8 to 31.7. 
+                Lastly, we performed a semi-supervised training on AVA after pre-training on HAKE. 
+                The mAP improves by a reasonable amount in all three metrics and pushes the boundary of the overall mAP to 34.0.
+                Besides, we build a baseline based on QPIC, namely QPIC-PCL*, such that the model can be trained without PaSta annotations. 
+                From the table, we can find that our method can still outperform QPIC by 1.2 mAP. 
+                With semi-supervised training, denoted by QPIC-PCL*-AVA, the performance got minor improvement with 0.1 overall mAP. 
+            </p>
+        </div>
+    </div>
+
+    <br>
     <hr>
     <br>
 
