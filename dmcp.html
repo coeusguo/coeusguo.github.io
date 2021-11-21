@@ -352,6 +352,15 @@
             </table>
     </div>
     <br>
+    We compare our method with various pruning methods, including reinforcement learning method AMC, evolution method MetaPruning, one-shot method AutoSlim, and traditional channel pruning methods SFP and FPGM.
+    ll methods are evaluated on MobileNetV2, ResNet18, and ResNet50, in each type of model, we trained a set of baseline  model for comparison.
+    From the Table, we can see that our method outperforms all other methods under the same settings, which show the superiority of our method.
+    Note that AMC, MetaPruning and our method train the pruned model from scratch by standard hard label loss.
+    While AutoSlim adopts a in-place distillation method in which the pruned network share weights with unpruned net and mimic the output of the unpruned net.
+    The groups marked by <strong>*</strong>> indicate the pruned model is trained by the in-place distillation method.
+    To fairly compare with AutoSlim, we also train our pruned model with the same method.
+    Results show that this training method can further boost the performance, and our method surpasses AutoSlim in different FLOPs models.
+    <br>
     <hr>
 </body>
 </html>
