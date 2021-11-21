@@ -109,15 +109,46 @@
             <img width="100%" src="images/dmcp_arch.png" alt="framework">
         </div>
     </div>
-    <hr>
     <br>
 
-The channel pruning is first formulated as a Markov process parameterized by architecture parameters and can be optimized in an end-to-end manner.
-Then,the training procedure of DMCP can be divided into two stages: 
-in stage 1, the unpruned network is updated by our proposed \textbf{variant sandwich rule}, 
-while in stage 2, the architecture parameters are wrapped into the unpruned network and get updated, as shown in Figure (a).
-After the optimization, we propose two ways to sample the pruned network.
-<br>
+    The channel pruning is first formulated as a Markov process parameterized by architecture parameters and can be optimized in an end-to-end manner.
+    Then the training procedure of DMCP can be divided into two stages: 
+    in stage 1, the unpruned network is updated by our proposed <strong>variant sandwich rule</strong>, 
+    while in stage 2, the architecture parameters are wrapped into the unpruned network and get updated, as shown in Figure (a).
+    After the optimization, we propose two ways to sample the pruned network.
+    <br>
+    <hr>
+    <div class="row" style="font-size:32px">
+        <div class="col">
+        Main Experiment Results
+        </div>
+    </div>
+    <br>
+    <div class="h-100 row text-center justify-content-md-center">
+        <div class="col">
+            <table class="metric_table">
+                <tr>
+                    <th>Group</th>
+                    <th>Model</th>
+                    <th>FLOPs</th>
+                    <th>Top-1</th>
+                    <th>&Delta; Top-1</th>
+                </tr>
+                <tr>
+                    <td class='left_align'rowspan="2" scope="rowgroup">MobileNet-V2</td>
+                    <td>Uniform 1.0x</td>
+                    <td>300M</td>
+                    <td>72.3</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Uniform 0.75x</td>
+                    <td>210M</td>
+                    <td>70.1</td>
+                    <td>-2.2</td>
+                </tr>
+            </table>
+
 
 </div>
 
