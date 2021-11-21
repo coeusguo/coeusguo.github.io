@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 
-	<title>PCL</title>
+	<title>STCN</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS only -->
@@ -31,33 +31,21 @@
 <div class="container">
         <div class="row text-center" style="font-size:38px">
             <div class="col">
-                Learning Transferable Part-Level Representation by Language Supervision
+            Rethinking Space-Time Networks with Improved Memory Coverage for Efficient Video Object Segmentation
             </div>
         </div>
 
         <br>
         <div class="row text-center" style="font-size:28px">
             <div class="col">
-            CVPR 2022 Submission Under Review
+            NeurIPS 2021
             </div>
         </div>
         <br>
 
         <div class="h-100 row text-center heavy justify-content-md-center" style="font-size:24px;">
             <div class="col-sm-3">
-                <a href="https://hkchengrex.github.io/">Shaopeng Guo</a>
-            </div>
-            <div class="col-sm-3">
-                Yonglu Li
-            </div>
-            <div class="col-sm-3">
-                Xinpeng Liu
-            </div>
-            <div class="col-sm-3">
-                Xinyu Xu
-            </div>
-            <div class="col-sm-3">
-                Cewu Lu
+                <a href="https://hkchengrex.github.io/">Ho Kei Cheng</a>
             </div>
             <div class="col-sm-3">
                 Yu-Wing Tai
@@ -71,15 +59,19 @@
 
         <div class="h-100 row text-center justify-content-md-center" style="font-size:20px;">
             <div class="col-sm-2">
-                [Paper]
+                <a href="https://arxiv.org/abs/2106.05210">[arXiv]</a>
             </div>
             <div class="col-sm-2">
-                [Code]
+                <a href="https://arxiv.org/pdf/2106.05210">[Paper]</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="https://github.com/hkchengrex/STCN">[Code]</a>
             </div>
         </div>
 
     <br>
 
+    <i>News:</i> In the <a href="https://youtube-vos.org/challenge/2021/leaderboard/">YouTubeVOS 2021 challenge</a>, STCN achieved 1st place accuracy in novel (unknown) classes and 2nd place in overall accuracy. Our solution is also fast and light.
 
     <hr>
 
@@ -91,36 +83,17 @@
     <div class="row">
         <div class="col">
             <p style="text-align: justify;">
-                Human-Object Interaction (HOI) detection plays an important role in human activity understanding. 
-                Most previous methods solely rely on human instance-level supervision and thus cannot effectively disentangle the fine-grained action semantics (e.g., holding while eating). 
-                Recently, <a href="https://arxiv.org/pdf/2004.00945.pdf" >PaStaNet</a> has proposed to address the problem by explicitly labeling the states of each body part with corresponding human pose and boxes in the images. 
-                However, its network structure is very complicated and hard to train and make inferences due to the complex input.
-                In this paper, we propose a novel framework that adopts a transformer-based detector that, besides using HOI labels, only employ human-part state annotations (i.e., without human part box position and human pose).
-                Instead of directly applying discrete human-part labels during classification, we incorporate a language model BERT to transform natural language labels to continuous latent feature vectors and train our model by contrastive loss. 
-                Moreover, we can further utilize our trained BERT to train our model with the weakly-labeled dataset without part state labels (e.g., AVA) by language supervision. 
-                The experimental results on the HICO-DET dataset demonstrate the superiority of our method in terms of overall mAP <strong>(34.0 vs 29.1)</strong> and especially mAP of rare classes <strong>(31.9 vs 22.6)</strong> compared with the state-of-the-art methods.
+                This paper presents a simple yet effective approach to modeling space-time correspondences in the context of video object segmentation. Unlike most existing approaches, we establish correspondences directly between frames without re-encoding the mask features for every object, leading to a highly efficient and robust framework. With the correspondences, every node in the current query frame is inferred by aggregating features from the past in an associative fashion. 
+                We cast the aggregation process as a voting problem and find that the existing inner-product affinity leads to poor use of memory with a small (fixed) subset of memory nodes dominating the votes, regardless of the query. 
+                In light of this phenomenon, we propose using the negative squared Euclidean distance instead to compute the affinities. We validated that every memory node now has a chance to contribute, and experimentally showed that such diversified voting is beneficial to both memory efficiency and inference accuracy. 
+                The synergy of correspondence networks and diversified voting works exceedingly well, achieves new state-of-the-art results on both DAVIS and YouTubeVOS datasets while running significantly faster at 20+ FPS for multiple objects without bells and whistles.
             </p>
         </div>
     </div>
 
     <div class="h-100 row text-center justify-content-md-center">
         <div class="col">
-            <img width="65%" src="images/pcl_teaser.png" alt="framework">
-        </div>
-    </div>
-
-    <br>
-    <hr>
-    <br>
-    <div class="row" style="font-size:32px">
-        <div class="col">
-        Network Architecture
-        </div>
-    </div>
-
-    <div class="h-100 row text-center justify-content-md-center">
-        <div class="col">
-            <img width="100%" src="images/pcl_arch.png" alt="framework">
+            <img width="65%" src="https://imgur.com/TY1ScRy.jpg" alt="framework">
         </div>
     </div>
 
@@ -130,7 +103,7 @@
 
     <div class="row" style="font-size:32px">
         <div class="col">
-        Experiment Results on HICO-DET
+        Quantitative Results
         </div>
     </div>
 
@@ -225,23 +198,51 @@
     <hr>
     <br>
 
+    <!-- <div class="row" style="font-size:32px">
+        <div class="col">
+        Presentation
+        </div>
+    </div>
+    <br>
+    <center>
+        <iframe style="width:100%; aspect-ratio: 1.78;"
+            src="https://www.youtube.com/embed/lN--up3FYzU" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </center>
 
-<!-- 
+    <br>
+    <hr>
+    <br> -->
+
     <div class="row" style="font-size:32px">
         <div class="col">
         Qualitative Results
         </div>
     </div>
-    <br> -->
-    <!-- <center>
+    <br>
+    <center>
         <iframe style="width:100%; aspect-ratio: 1.78;"
             src="https://www.youtube.com/embed/j88gG-foerw" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
         </iframe>
-    </center> -->
+    </center>
 
+    <br><br>
+
+    <div style="font-size: 14px;">
+        Contact: Ho Kei Cheng (Rex) hkchengrex@gmail.com
+        <br>
+        <div style="color: lightgray;">
+            Website modified from: https://github.com/ajabri/videowalk/blob/master/index.html
+        </div>
+    </div>
+
+    <br><br>
 
 </div>
 
